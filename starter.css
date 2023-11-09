@@ -1,0 +1,100 @@
+/* Reset CSS */
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+/* CSS Variabler */
+:root {
+    /* Fargepalett */
+    --primary-color: #007bff;
+    --secondary-color: #0056b3;
+    --background-color: #fff;
+    --text-color: #333;
+    --primary-white: #efefef;
+
+    /* Typografi */
+    --font-family: 'Arial', sans-serif;
+    --base-font-size: 1.2rem;
+
+    /* Layout og spacing */
+    --container-width: 1200px;
+    --container-padding: 1.2rem;
+    --base-spacing: 1rem;
+}
+
+/* Body & Typografi */
+body {
+font-family: var(--font-family);
+font-size: var(--base-font-size);
+line-height: 1.6;
+color: var(--text-color);
+background-color: var(--background-color);
+}
+
+/* Linker */
+a {
+color: var(--primary-color);
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: underline;
+}
+
+/* Overskrifter */
+h1, h2, h3, h4, h5, h6 {
+margin-bottom: 0.5em;
+color: var(--text-color);
+}
+
+/* Knapper */
+button {
+padding: var(--base-spacing);
+background-color: var(--primary-color);
+color: var(--primary-white);
+border: none;
+border-radius: 0.3em;
+cursor: pointer;
+}
+
+button:hover {
+background-color: var(--secondary-color);
+}
+
+/* Container */
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 15px;
+}
+
+/* Responsiv Grid */
+.row {
+display: flex;
+flex-wrap: wrap;
+}
+
+.col {
+flex: 1;
+padding: 15px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+.col {
+flex-basis: 100%;
+}
+}
+
+/* Hjelpeklasser */
+.text-center {
+text-align: center;
+}
+
+.mt-1 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 1rem; }
